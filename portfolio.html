@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/d124774654.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img class="logo" src="logo1.png">
+        <ul id="side-menu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+         <p class="header-text1"> Full-Stack developer | Fresher in Tech </p>
+        <h1>Hi, I'm <span>Dara</span><br><span> Swetha </span> from India</h1>
+      </div>
+    </div>
+  </div>
+  <!-----------------------about------------------------------------>
+  <div id="about">
+    <div class="container">
+      <div class="aboutme">
+        <div class="about-col-1">
+          <img class="about-me-pic" src="about-me1.jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title"> About Me </h1>
+          <P>Hello! I am Swetha, a fresher passionate about web development and back-end development. Skilled in HTML, CSS, JavaScript, core java, and SQL. I am eager to learn and grow in the tech industry.
+            I am always eager to learn new tools and techniques to expand my capabilities, and I'm 
+            excited to make my mark in the tech industry.</P>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span> Web Development</span><br> Building responsive and visually engaging websites using HTML, CSS, JavaScript. </li>
+                <li><span> backend-End Development</span><br>focusing on efficient server-side logic, database management, and seamless data flow to enhance application functionality and performance. </li>
+                <li><span> Database Management </span><br> Desiging and managing databases using SQL to ensure efficient data organization and retrieval. </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2023-2024</span><br> completed java traning in JSPIDERS</li>
+                <li><span> 2019-2022</span><br> Bachelor's in Computer Science at CDC College</li>
+                <li><span>2017-2019</span><br> Intermediate at SR Junior College</li>
+                <li><span>2017</span><br> SCC(Secondary School Certificate) in Sri Panini High School</li>
+              </ul>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------------------------------services---------------------------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title"> My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2> Web Development</h2>
+          <p> Building responsive and visually engaging websites using HTML, CSS, JavaScript.</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-laptop-code"></i>
+          <h2> backend-End Development</h2>
+          <p>focusing on efficient server-side logic, database management, and seamless data flow to enhance application functionality and performance. </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-database"></i>
+          <h2> Database Management</h2>
+          <p> Desiging and managing databases using SQL to ensure efficient data organization and retrieval. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------------------------contact me ------------------------>
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title"> contact me</h1>
+          <P><i class="fa-regular fa-paper-plane"></i>swetharaodara001@gmail.com</P>
+          <p><i class="fa-solid fa-phone"></i>**********</p>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/swetha-rao-dara" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="swetha resume (1).pdf" download class="btn btn2"> Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+      for( tablink of tablinks){
+        tablink.classList.remove("active-link")
+      }
+      for( tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+      }
+      event.currentTarget.classList.add("active-link") //---------it is for activing (line under education) the edu
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+</body>
+</html>
